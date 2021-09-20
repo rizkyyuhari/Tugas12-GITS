@@ -5,13 +5,27 @@
     android:layout_height="match_parent"
     tools:context=".fragment.MovieFragment">
 
+
+
+    <TextView
+        android:id="@+id/tv_pop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Popular Movies"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_margin="10dp"
+        />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_centerInParent="true"
         android:scrollbars="vertical"
-        tools:listitem="@layout/movie_list" />
+        tools:listitem="@layout/movie_list"
+        android:layout_below="@+id/tv_pop"/>
 
 
 </RelativeLayout>
