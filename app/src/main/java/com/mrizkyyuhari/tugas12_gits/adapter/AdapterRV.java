@@ -57,6 +57,8 @@ public class AdapterRV extends RecyclerView.Adapter<AdapterRV.ViewHolderRV>{
             intent.putExtra("title",movieList.get(position).getTitle());
             intent.putExtra("backdrop",BuildConfig.IMAGE +movieList.get(position).getBackdropPath());
             intent.putExtra("overview",movieList.get(position).getOverview());
+            intent.putExtra("voteaverage",movieList.get(position).getVoteAverage());
+            intent.putExtra("posterpath",movieList.get(position).getPosterPath());
             context.startActivity(intent);
         });
 

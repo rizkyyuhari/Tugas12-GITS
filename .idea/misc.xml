@@ -4,10 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Aditya/AndroidStudioProjects/Tugas12Gits/app/src/main/res/drawable/movie_bg.xml" value="0.3828125" />
-        <entry key="..\:/Users/Aditya/AndroidStudioProjects/Tugas12Gits/app/src/main/res/layout/activity_detail.xml" value="0.22" />
+        <entry key="..\:/Users/Aditya/AndroidStudioProjects/Tugas12Gits/app/src/main/res/layout/activity_detail.xml" value="0.25" />
+        <entry key="..\:/Users/Aditya/AndroidStudioProjects/Tugas12Gits/app/src/main/res/layout/activity_detail_favorite_movies.xml" value="0.18177083333333333" />
         <entry key="..\:/Users/Aditya/AndroidStudioProjects/Tugas12Gits/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/Aditya/AndroidStudioProjects/Tugas12Gits/app/src/main/res/layout/activity_splash_screen.xml" value="0.3625" />
-        <entry key="..\:/Users/Aditya/AndroidStudioProjects/Tugas12Gits/app/src/main/res/layout/fragment_favorite.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/Aditya/AndroidStudioProjects/Tugas12Gits/app/src/main/res/layout/fragment_favorite.xml" value="0.1" />
         <entry key="..\:/Users/Aditya/AndroidStudioProjects/Tugas12Gits/app/src/main/res/layout/fragment_movie.xml" value="0.31950207468879666" />
         <entry key="..\:/Users/Aditya/AndroidStudioProjects/Tugas12Gits/app/src/main/res/layout/fragment_tvshow.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/Aditya/AndroidStudioProjects/Tugas12Gits/app/src/main/res/layout/movie_list.xml" value="0.3161094224924012" />

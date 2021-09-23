@@ -1,14 +1,22 @@
 package com.mrizkyyuhari.tugas12_gits.fragment;
 
+import android.content.Context;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.mrizkyyuhari.tugas12_gits.R;
+import com.mrizkyyuhari.tugas12_gits.adapter.FavoriteMoviesAdapter;
+import com.mrizkyyuhari.tugas12_gits.room.FavoriteMovies;
+import com.mrizkyyuhari.tugas12_gits.room.MyMoviesDB;
+
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -16,7 +24,9 @@ import com.mrizkyyuhari.tugas12_gits.R;
  * create an instance of this fragment.
  */
 public class FavoriteFragment extends Fragment {
-
+    private static final String TAG = "FavoriteFragment";
+    public MyMoviesDB myMoviesDB;
+    RecyclerView recyclerView;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -60,7 +70,17 @@ public class FavoriteFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_favorite, container, false);
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_favorite, container, false);
+        Context context = view.getContext();
+
+        recyclerView = view.findViewById(R.id.rv_favorite);
+        recyclerView.setLayoutManager(new LinearLayoutManager(context));
+        MyMoviesDB myMoviesDB = MyMoviesDB.getInstance(context);
+        List<FavoriteMovies> fav = myMoviesDB.myDao().getAll();
+        FavoriteMoviesAdapter favoriteMoviesAdapter = new FavoriteMoviesAdapter(context,fav);
+        recyclerView.setAdapter(favoriteMoviesAdapter);
+
+        return view;
     }
 }
